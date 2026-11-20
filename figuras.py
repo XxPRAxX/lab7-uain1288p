@@ -1,19 +1,23 @@
 import math
 
-def calc(t, a, b=0):
-    # t = tipo de figura
-    if t == "circulo":
-        r = a * a * 3.14159
-        return r
-    elif t == "rectangulo":
-        r = a * b
-        return r
-    elif t == "triangulo":
-        r = a * b / 2
-        return r
-    else:
-        return -1
 
-print(calc("circulo", 5))
-print(calc("rectangulo", 4, 6))
-print(calc("triangulo", 3, 8))
+def area_circulo(radio):
+    return math.pi * radio ** 2
+
+
+def area_rectangulo(base, altura):
+    return base * altura
+
+
+def area_triangulo(base, altura):
+    return base * altura / 2
+
+
+def main():
+    print(f"Area del circulo (radio 5):        {area_circulo(5):.2f}")
+    print(f"Area del rectangulo (4 x 6):       {area_rectangulo(4, 6):.2f}")
+    print(f"Area del triangulo (base 3, alt 8): {area_triangulo(3, 8):.2f}")
+
+
+if __name__ == "__main__":
+    main()
